@@ -52,7 +52,7 @@ External IDs and Content is not checked for validity, or sanitized, as it is onl
 | 2 bytes | ExtIDs Size | Describes how many bytes required for the set of External IDs for this Entry.  Must be less than or equal to the Payload size.  Big endian. |
 | **Payload** | | This is the data between the end of the Header and the end of the Content. |
 | **External IDs** |  | This section is only interpreted and enforced if the External ID Size is greater than zero. |
-| 2 bytes | ExtID element 0 length | This is the number of the following bytes to be interpreted as an External ID element.  Cannot be 0 length. |
+| 2 bytes | ExtID element 0 length | This is the number of the following bytes to be interpreted as an External ID element.  Can be 0 length. |
 | variable | ExtID 0 | This is the data for the first External ID. |
 | 2 bytes | ExtID X | Size of the X External ID  |
 | variable | ExtID X data | This is the Xth element.  The last byte of the last element must fall on the last byte specified ExtIDs Size in the header. |
